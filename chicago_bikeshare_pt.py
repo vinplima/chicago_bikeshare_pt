@@ -266,6 +266,15 @@ print("Você vai encarar o desafio? (yes ou no)")
 answer = "yes"
 
 def count_items(column_list):
+    """
+    Função que retorna duas listas, a primeira com os itens possíveis de registros e a segunda com o total de registros para cada item,
+    a partir de uma lista de dados.
+    Argumentos:
+        column_list: lista com os registros de uma única coluna do arquivo chicago.csv
+    Retorna:
+        Lista com duas listas: item possíveis e quantidade de registro para cada item
+
+    """
     item_types = list(set(column_list))
     count_items = [column_list.count(type_name) for type_name in item_types]
     
